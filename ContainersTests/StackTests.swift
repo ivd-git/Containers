@@ -23,6 +23,11 @@ class StackTests: QuickSpec {
 				
 				expect(stack.isEmpty()).to(beFalse())
 			}
+			
+			it("with no containers throws exception on lower") {
+				let stack = Stack()
+				expect{ try stack.lower()}.to(throwError());
+			}
 
         }
     }

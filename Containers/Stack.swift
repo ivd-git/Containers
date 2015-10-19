@@ -1,5 +1,10 @@
 import Foundation
 
+
+enum StackError: ErrorType {
+	case AwesomeContainerMissing
+}
+
 public class Stack {
 
 	var containerIds : Int
@@ -15,5 +20,9 @@ public class Stack {
 	
 	public func raise(containerId: Int) -> () {
 		containerIds = containerId
+	}
+	
+	public func lower() throws -> ()  {
+		throw StackError.AwesomeContainerMissing
 	}
 }
