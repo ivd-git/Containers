@@ -1,7 +1,7 @@
 import Foundation
 
 
-enum StackError: ErrorType {
+public enum StackError: ErrorType {
 	case AwesomeContainerMissing
 }
 
@@ -24,7 +24,9 @@ public class Stack {
 	
 	public func lower() throws -> (Int)  {
 		if (!isEmpty()) {
-			return containerIds
+			let id = containerIds
+			containerIds = 0
+			return id
 		}
 		
 		throw StackError.AwesomeContainerMissing

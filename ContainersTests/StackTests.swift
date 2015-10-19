@@ -38,7 +38,14 @@ class StackTests: QuickSpec {
 				expect{ try stack.lower() }.to(equal(containerId))
 			}
 			
-
+			it("should be empty when last container is lowered") {
+				stack.raise(containerId)
+				do { try stack.lower() }
+				catch {
+				}
+				
+				expect(stack.isEmpty()).to(beTrue())
+			}
         }
     }
 }
