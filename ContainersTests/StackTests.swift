@@ -9,6 +9,7 @@ class StackTests: QuickSpec {
         describe("stack") {
 			
 			var stack : Stack!
+			let containerId = 1
 			
 			beforeEach {
 				stack = Stack()
@@ -24,7 +25,7 @@ class StackTests: QuickSpec {
 			}
 			
 			it("with raised container on the top should not be empty") {
-				let containerId = 1
+
 				stack.raise(containerId)
 				
 				expect(stack.isEmpty()).to(beFalse())
@@ -35,10 +36,10 @@ class StackTests: QuickSpec {
 			}
 			
 			it("should return the raised container id on lower") {
-				let containerId = 1;
 				stack.raise(containerId)
 				expect{ try stack.lower() }.to(equal(containerId))
 			}
+			
 
         }
     }
