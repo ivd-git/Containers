@@ -33,6 +33,12 @@ class StackTests: QuickSpec {
 			it("with no containers throws exception on lower") {
 				expect{ try stack.lower()}.to(throwError());
 			}
+			
+			it("should return the raised container id on lower") {
+				let containerId = 1;
+				stack.raise(containerId)
+				expect{ try stack.lower() }.to(equal(containerId))
+			}
 
         }
     }

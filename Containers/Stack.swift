@@ -22,7 +22,11 @@ public class Stack {
 		containerIds = containerId
 	}
 	
-	public func lower() throws -> ()  {
+	public func lower() throws -> (Int)  {
+		if (!isEmpty()) {
+			return containerIds
+		}
+		
 		throw StackError.AwesomeContainerMissing
 	}
 }
