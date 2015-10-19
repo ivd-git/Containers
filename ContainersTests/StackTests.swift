@@ -7,6 +7,13 @@ class StackTests: QuickSpec {
     override func spec() {
 
         describe("stack") {
+			
+			var stack : Stack!
+			
+			beforeEach {
+				stack = Stack()
+			}
+			
 
             it("can be created") {
                 expect(Stack()).toNot(beNil())
@@ -18,14 +25,12 @@ class StackTests: QuickSpec {
 			
 			it("with raised container on the top should not be empty") {
 				let containerId = 1
-				let stack = Stack()
 				stack.raise(containerId)
 				
 				expect(stack.isEmpty()).to(beFalse())
 			}
 			
 			it("with no containers throws exception on lower") {
-				let stack = Stack()
 				expect{ try stack.lower()}.to(throwError());
 			}
 
