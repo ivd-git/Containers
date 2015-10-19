@@ -11,6 +11,10 @@ class StackTests: QuickSpec {
             it("can be created") {
                 expect(Stack()).toNot(beNil())
             }
+			
+			it("should be empty") {
+				expect(Stack().isEmpty()).to(beTrue())
+			}
 
         }
     }
