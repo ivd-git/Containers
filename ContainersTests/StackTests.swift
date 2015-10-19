@@ -7,14 +7,12 @@ class StackTests: QuickSpec {
     override func spec() {
 
         describe("stack") {
-			
 			var stack : Stack!
 			let containerId = 1
 			
 			beforeEach {
 				stack = Stack()
 			}
-			
 
             it("can be created") {
                 expect(Stack()).toNot(beNil())
@@ -48,7 +46,6 @@ class StackTests: QuickSpec {
 			}
 			
 			it("should allow stacking of 2 containers") {
-				
 				let bottomContainerId = 1
 				let topContainerId = 2
 				
