@@ -17,8 +17,8 @@ class StackTests: QuickSpec {
 			}
 			
 			it("with raised container on the top should not be empty") {
-				var containerId = 1
-				var stack = Stack()
+				let containerId = 1
+				let stack = Stack()
 				stack.raise(containerId)
 				
 				expect(stack.isEmpty()).to(beFalse())
