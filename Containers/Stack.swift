@@ -8,11 +8,8 @@ public enum StackError: ErrorType {
 public class Stack {
 	
 	var containers : [Int]
-
-	var containerIds : Int
 	
     public init() {
-		containerIds = 0
 		containers = [Int]()
     }
 	
