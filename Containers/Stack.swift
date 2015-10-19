@@ -22,9 +22,7 @@ public class Stack {
 	}
 	
 	public func lower() throws -> (Int)  {
-		if (isEmpty()) {
-		    throw StackError.AwesomeContainerMissing
-		}
+		guard !isEmpty() else { throw StackError.AwesomeContainerMissing }
 		
 		return containers.removeLast()
 	}

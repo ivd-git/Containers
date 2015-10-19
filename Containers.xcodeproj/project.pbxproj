@@ -16,6 +16,10 @@
 		5CC458CC1BCFD781000A550F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC458CA1BCFD781000A550F /* LaunchScreen.storyboard */; };
 		5CC458D71BCFD781000A550F /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC458D61BCFD781000A550F /* StackTests.swift */; };
 		6F75C4F700F4D5EE934459B6 /* Pods_ContainersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A64240797CD95F1AEE71B09 /* Pods_ContainersTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F62BC6BA1BD56CD200B60C85 /* CraneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BC6B91BD56CD200B60C85 /* CraneTests.swift */; settings = {ASSET_TAGS = (); }; };
+		F62BC6BC1BD5707200B60C85 /* Crane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BC6BB1BD5707200B60C85 /* Crane.swift */; settings = {ASSET_TAGS = (); }; };
+		F62BC6BE1BD5708A00B60C85 /* CraneHal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BC6BD1BD5708A00B60C85 /* CraneHal.swift */; settings = {ASSET_TAGS = (); }; };
+		F62BC6C01BD570E500B60C85 /* FakeCraneHal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BC6BF1BD570E500B60C85 /* FakeCraneHal.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		5CC458D81BCFD781000A550F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93F67D946944ABBB4106F64A /* Pods-ContainersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContainersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContainersTests/Pods-ContainersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C54B5A059AEB0E72352C86AE /* Pods-ContainersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContainersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContainersTests/Pods-ContainersTests.release.xcconfig"; sourceTree = "<group>"; };
+		F62BC6B91BD56CD200B60C85 /* CraneTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CraneTests.swift; sourceTree = "<group>"; };
+		F62BC6BB1BD5707200B60C85 /* Crane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crane.swift; sourceTree = "<group>"; };
+		F62BC6BD1BD5708A00B60C85 /* CraneHal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CraneHal.swift; sourceTree = "<group>"; };
+		F62BC6BF1BD570E500B60C85 /* FakeCraneHal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCraneHal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,8 @@
 				5CC209C11BD01E5E00551774 /* Crane.c */,
 				5CC209C21BD01E5E00551774 /* Crane.h */,
 				5CC209C01BD01E5E00551774 /* Containers-Bridging-Header.h */,
+				F62BC6BB1BD5707200B60C85 /* Crane.swift */,
+				F62BC6BD1BD5708A00B60C85 /* CraneHal.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -109,6 +119,8 @@
 			children = (
 				5CC458D61BCFD781000A550F /* StackTests.swift */,
 				5CC458D81BCFD781000A550F /* Info.plist */,
+				F62BC6B91BD56CD200B60C85 /* CraneTests.swift */,
+				F62BC6BF1BD570E500B60C85 /* FakeCraneHal.swift */,
 			);
 			path = ContainersTests;
 			sourceTree = "<group>";
@@ -282,6 +294,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC458C41BCFD781000A550F /* ViewController.swift in Sources */,
+				F62BC6BE1BD5708A00B60C85 /* CraneHal.swift in Sources */,
+				F62BC6BC1BD5707200B60C85 /* Crane.swift in Sources */,
 				5C3254EA1BD2EA15009126E4 /* Stack.swift in Sources */,
 				5CC209C31BD01E5E00551774 /* Crane.c in Sources */,
 				5CC458C21BCFD781000A550F /* AppDelegate.swift in Sources */,
@@ -293,6 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC458D71BCFD781000A550F /* StackTests.swift in Sources */,
+				F62BC6BA1BD56CD200B60C85 /* CraneTests.swift in Sources */,
+				F62BC6C01BD570E500B60C85 /* FakeCraneHal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
