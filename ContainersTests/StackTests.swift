@@ -46,6 +46,18 @@ class StackTests: QuickSpec {
 				
 				expect(stack.isEmpty()).to(beTrue())
 			}
+			
+			it("should allow stacking of 2 containers") {
+				
+				let bottomContainerId = 1
+				let topContainerId = 2
+				
+				stack.raise(bottomContainerId)
+				stack.raise(topContainerId)
+				
+				expect{ try stack.lower() }.to(equal(topContainerId))
+				expect{ try stack.lower() }.to(equal(bottomContainerId))
+			}
         }
     }
 }

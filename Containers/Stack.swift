@@ -6,20 +6,22 @@ public enum StackError: ErrorType {
 }
 
 public class Stack {
+	
+	var containers : [Int]
 
 	var containerIds : Int
 	
     public init() {
 		containerIds = 0
+		containers = [Int]()
     }
 	
 	public func isEmpty() -> (Bool) {
-		
-		return 0 == containerIds
+		return containers.isEmpty
 	}
 	
 	public func raise(containerId: Int) -> () {
-		containerIds = containerId
+		containers.append(containerId)
 	}
 	
 	public func lower() throws -> (Int)  {
@@ -27,8 +29,6 @@ public class Stack {
 		    throw StackError.AwesomeContainerMissing
 		}
 		
-		let id = containerIds
-		containerIds = 0
-		return id
+		return containers.removeLast()
 	}
 }
