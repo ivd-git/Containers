@@ -25,9 +25,7 @@ class StackTests: QuickSpec {
 			}
 			
 			it("with raised container on the top should not be empty") {
-
 				stack.raise(containerId)
-				
 				expect(stack.isEmpty()).to(beFalse())
 			}
 			
